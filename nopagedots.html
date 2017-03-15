@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Official Cydia Repo</title>
+		<title>Making My First Tweak: NoPageDots</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -22,9 +22,15 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-<h2>harrywantstodev</h2>
+<h2>Making My First Tweak: NoPageDots</h2>
 										</header>
-										<p>Tweaks, Tutorials and Free Code</p>
+										<p>This tutorial is made for iOS 10 so things may not be exactly the same in the future.</p>
+										<p2>Things needed for this tutorial</p2>
+										<ul style="list-style-type:disc">
+  									<li>theos installation</li>
+  									<li>new project ready for your tweak</li>
+  									<li>test device to test your tweak</li>
+									</ul>
 								</div>
 							</section>
 
@@ -33,22 +39,16 @@
 								<header class="major">
 									<h1>Links</h1>
 								</header>
-								<ul class="features">
-									<li>
-										<span class="icon major style1 fa-code"></span>
-										<h3>-<b>Tweaks</b>-</h3>
-										<p>HideMeridiem, NoDots10, SingleLineDate, NoLSPadLock</p>
-									</li>
-									<li>
-										<span class="icon major style3 fa-book"></span>
-										<h3>-<b>Tutorials</b>-</h3>
-				<p>My First Tweak: NoPageDots</p>
-									</li>
-								</ul>
+								<p>The first part of making a tweak is finding the classes to hook. A lot of tutorials skip this step but an easy way of doing this is using http://developer.limneos.net. This has a search bar which makes easy to find which header you are looking for.</p>
+								<p2>The aim of this tweak will be to hide the page dots on the homescreen. After thinking about what you want to do use http://developer.limneos.net to search for the correct header. I'll give you a hint, the name of this header isn't simply SBPageDots.  </p2><code>%hook SBIconListPageControl
+								- (id)initWithFrame:(CGRect)frame
+								{
+									return SBisEnabled ? nil : %orig;
+								}
+								%end</code>
 								<footer class="major">
 									<ul class="actions">
-										<li><a href="http://www.dropbox.com/s/yvaj490tyzgzfyx/username.github.zip?dl=0" class="button"><i class="fa fa-cloud-download">&nbsp; Download Old Website</i></a></li><li><a href="" class="button"><i class="fa fa-cloud-download">&nbsp; Download New Website</i></a></li>
-<li><a href="nopagedots.html" class="button"><i class="fa fa-book">&nbsp; Tutorials</i></a></li>
+										<li><a href="http://www.dropbox.com/s/yvaj490tyzgzfyx/username.github.zip?dl=0" class="button"><i class="fa fa-cloud-download">&nbsp; Download Example Project</i></a></li>
 									</ul>
 								</footer>
 							</section>
