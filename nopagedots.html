@@ -30,6 +30,7 @@
   									<li>theos installation</li>
   									<li>new project ready for your tweak</li>
   									<li>test device to test your tweak</li>
+										<li><a href="http://developer.limneos.net">iOS 10 Headers</a></li>
 									</ul>
 								</div>
 							</section>
@@ -39,13 +40,27 @@
 								<header class="major">
 									<h1>Links</h1>
 								</header>
-								<p>The first part of making a tweak is finding the classes to hook. A lot of tutorials skip this step but an easy way of doing this is using http://developer.limneos.net. This has a search bar which makes easy to find which header you are looking for.</p>
-								<p2>The aim of this tweak will be to hide the page dots on the homescreen. After thinking about what you want to do use http://developer.limneos.net to search for the correct header. I'll give you a hint, the name of this header isn't simply SBPageDots.  </p2><code>%hook SBIconListPageControl
-								- (id)initWithFrame:(CGRect)frame
-								{
-									return SBisEnabled ? nil : %orig;
-								}
-								%end</code>
+								<p>The first part of making a tweak is finding the classes to hook. A lot of tutorials skip this step but an easy way of doing this is using <a href="http://developer.limneos.net">Develope.Limneos.net</a>.  This has a search bar which makes easy to find which header you are looking for.</p>
+
+								<p2>The aim of this tweak will be to hide the page dots on the homescreen. After thinking about what you want to do, use <a href="http://developer.limneos.net">Developer.Limneos.net</a> to search for the correct header. The header will be part of SpringBoard as SpringBoard is the framework which your homescreen is part of (Your homescreen uses other frameworks as well but ssshh). I'll give you a hint, the name of this header isn't simply SBPageDots.</p2>
+
+								<p></p>
+
+								<p>The homescreen iOS page dots are part of Page Control and SpringBoard so you can go to your headers are search for anything containing "PageControl" (You can narrow it down to SpringBoard.framework and use CTRL+F to search). If you find a header that you think may contain what you are looking for. Open up that header and look at the methods within it (The -(void)s &amp; -(id), etc</p>
+								<p>Found It? It's SBIconListPageControl. The code below is an example and each line will be explained</p>
+
+								<code>%hook SBIconListPageControl</code><p>This hooks the class that we want to modify</p>
+
+								<code>-(id)initWithFrame:(CGRect)arg1</code><p>This is the method within the class that we want to modify. "arg1" is argument 1 for the method. Modify arguments is a common thing for beginner tweaks. Download the example project of other ways to modify an argument.</p>
+
+								<code>{ return nil; }</code><p>This line returns "nil" for this class. Meaning arg1 for initWithFrame will return nothing</p>
+
+								<code>%end</code><p>This ends the %hook</p>
+
+								<p>Run <code>make do</code> or <code>make package install</code> to compile the code and install it onto your iPhone.</p>
+
+								<p>That's about it for this tutorial. Check out other headers and look for more things to modify.</p>
+
 								<footer class="major">
 									<ul class="actions">
 										<li><a href="http://www.dropbox.com/s/yvaj490tyzgzfyx/username.github.zip?dl=0" class="button"><i class="fa fa-cloud-download">&nbsp; Download Example Project</i></a></li>
