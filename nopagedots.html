@@ -38,16 +38,18 @@
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
-									<h1>Links</h1>
+									<h1>Step 1: Finding the Class to Hook</h1>
 								</header>
 								<p>The first part of making a tweak is finding the classes to hook. A lot of tutorials skip this step but an easy way of doing this is using <a href="http://developer.limneos.net">Develope.Limneos.net</a>.  This has a search bar which makes easy to find which header you are looking for.</p>
 
 								<p2>The aim of this tweak will be to hide the page dots on the homescreen. After thinking about what you want to do, use <a href="http://developer.limneos.net">Developer.Limneos.net</a> to search for the correct header. The header will be part of SpringBoard as SpringBoard is the framework which your homescreen is part of (Your homescreen uses other frameworks as well but ssshh). I'll give you a hint, the name of this header isn't simply SBPageDots.</p2>
-e
+
 								<p></p>
 
 								<p>The homescreen iOS page dots are part of Page Control and SpringBoard so you can go to your headers are search for anything containing "PageControl" (You can narrow it down to SpringBoard.framework and use CTRL+F to search). If you find a header that you think may contain what you are looking for. Open up that header and look at the methods within it (The -(void)s &amp; -(id), etc</p>
 								<p>Found It? It's SBIconListPageControl. The code below is an example and each line will be explained</p>
+
+										<h1>Step 2: The Code</h1>
 
 								<code>%hook SBIconListPageControl</code><p>This hooks the class that we want to modify</p>
 
@@ -63,7 +65,8 @@ e
 
 								<footer class="major">
 									<ul class="actions">
-										<li><a href="http://www.dropbox.com/s/yvaj490tyzgzfyx/username.github.zip?dl=0" class="button"><i class="fa fa-cloud-download">&nbsp; Download Example Project</i></a></li>
+										<li><a href="https://github.com/harrywantstodev/harrywantstodev.github.io/blob/master/downloads/nosbpagedots.zip?raw=true" class="button"><i class="fa fa-cloud-download">&nbsp; Download Example Project Zip (NoPageDots)</i></a></li>
+										<li><a href="https://github.com/harrywantstodev/harrywantstodev.github.io/blob/master/downloads/nosbpagedots/packages/com.yourcompany.nosbpagedots_0.0.1-2+debug_iphoneos-arm.deb?raw=true" class="button"><i class="fa fa-cloud-download">&nbsp; Download Example Project Deb (NoPageDots)</i></a></li>
 									</ul>
 								</footer>
 							</section>
