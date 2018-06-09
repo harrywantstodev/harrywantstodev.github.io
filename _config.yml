@@ -8,7 +8,7 @@ locale:       "en"
 # About/contact
 author:
   name:       harrywantstodev
-  url:        http://yourhomepage.com 
+  url:        http://harrywantstodev.github.io 
 
 # Gems
 gems:
