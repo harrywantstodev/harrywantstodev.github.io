@@ -8,7 +8,7 @@
     - src: /assets/images/sc3.jpg
       alt: image three
   settings:
-    height: 400
+    height: "'auto'"
     initialHeight:
     maxHeight:
     interval:
