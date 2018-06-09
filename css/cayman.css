@@ -225,3 +225,7 @@ a:hover { text-decoration: underline; }
 .sharebuttons .github svg {
   fill: #181717;
 }
+
+.sharebuttons .gmail svg {
+  fill: #D14836;
+}
