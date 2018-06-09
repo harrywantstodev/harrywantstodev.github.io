@@ -18,3 +18,11 @@ images:
   - image_path: /assets/images/sc5.jpg
     title: Lamington
 ---
+
+...
+<ul class="photo-gallery">
+  {% for image in page.images %}
+    <li><img src="{{ image.image_path }}" alt="{{ image.title}}"/></li>
+  {% endfor %}
+</ul>
+

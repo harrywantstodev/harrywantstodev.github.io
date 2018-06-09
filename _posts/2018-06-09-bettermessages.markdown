@@ -16,9 +16,3 @@ The screenshots below show the range of features available including
 - A few emoji options
 - Change the color of the send and plugin button
 - Custom Backgrounds 
-
-<ul class="photo-gallery">
-  {% for image in page.images %}
-    <li><img src="{{ image.image_path }}" alt="{{ image.title}}"/></li>
-  {% endfor %}
-</ul>
