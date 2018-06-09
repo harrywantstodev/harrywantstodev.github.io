@@ -218,14 +218,10 @@ a:hover { text-decoration: underline; }
   fill: #FF4500;
 }
 
-.sharebuttons .hn svg {
-  fill: #F0652F;
-}
-
 .sharebuttons .twitter svg {
   fill: #1DA1F2;
 }
 
-.sharebuttons .linkedin svg {
-  fill: #0077B5;
+.sharebuttons .github svg {
+  fill: #181717;
 }
