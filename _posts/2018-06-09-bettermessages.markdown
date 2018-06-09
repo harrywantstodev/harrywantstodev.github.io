@@ -5,20 +5,20 @@ date:   2018-06-09 17:50:00
 categories: main
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+Change and add a range of features to the iOS Messages App.
 
-Jekyll also offers powerful support for code snippets:
+Sick of the default iOS Messages app? Well this tweak is for. It adds a heaps of features and more features coming every update. If you have any requests let me know via the credits section in the settings pane.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+The screenshots below show the range of features available including
+- Progress Bar with color changer
+- Navigation Bar color
+- Hide various items throughout the app
+- A few emoji options
+- Change the color of the send and plugin button
+- Custom Backgrounds 
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
-
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+{% for image in site.static_files %}
+    {% if image.path contains 'assets/bettermessages' %}
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+    {% endif %}
+{% endfor %}
