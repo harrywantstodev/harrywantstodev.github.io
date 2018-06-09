@@ -17,8 +17,8 @@ The screenshots below show the range of features available including
 - Change the color of the send and plugin button
 - Custom Backgrounds 
 
-{% for image in site.static_files %}
-    {% if image.path contains 'assets/images' %}
-        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
-    {% endif %}
-{% endfor %}
+<ul class="photo-gallery">
+  {% for image in page.images %}
+    <li><img src="{{ image.image_path }}" alt="{{ image.title}}"/></li>
+  {% endfor %}
+</ul>
