@@ -18,7 +18,7 @@ The screenshots below show the range of features available including
 - Custom Backgrounds 
 
 {% for image in site.static_files %}
-    {% if image.path contains 'assets/bettermessages' %}
+    {% if image.path contains 'assets/images' %}
         <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
     {% endif %}
 {% endfor %}

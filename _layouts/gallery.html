@@ -1,0 +1,10 @@
+---
+layout: default
+---
+# placed in /_layouts/
+{% capture gallery_path %}assets/images{{/{{ page.gallery-key }}{% endcapture %}
+{% for image in site.static_files %}
+    {% if image.path contains gallery_path %}
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+    {% endif %}
+{% endfor %}
