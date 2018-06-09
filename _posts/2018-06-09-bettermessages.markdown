@@ -4,7 +4,7 @@ title:  "BetterMessages"
 date:   2018-06-09 17:50:00
 categories: main
 image_sliders:
-   - example_slider
+  - example_slider
 ---
 
 Change and add a range of features to the iOS Messages App.
