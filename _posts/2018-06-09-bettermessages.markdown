@@ -17,5 +17,4 @@ The screenshots below show the range of features available including
 - Change the color of the send and plugin button
 - Custom Backgrounds 
 
-image_sliders:
-  - example_slider
+{% include slider.html selector="example_slider" %}
